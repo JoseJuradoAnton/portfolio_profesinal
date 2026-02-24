@@ -68,7 +68,7 @@ var type1 = new Typed(".heading", {
   loop: true,
 });
 var type2 = new Typed(".project", {
-  strings: ["Lates `<span>Projects</span>`"],
+  strings: ["Proyects `<span> NODE JS , REACT JS </span>`"],
   typeSpeed: 100,
   backSpeed: 100,
   backDelay: 1000,

@@ -250,7 +250,9 @@ a {
   max-width: 450px;
   border-radius: 150px;
   opacity: 0;
-  animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
+  animation:
+    zoomIn 1s ease forwards,
+    floatImage 4s ease-in-out infinite;
   animation-delay: 2s, 3s;
 }
 
@@ -591,13 +593,37 @@ a {
   padding: 10px;
 }
 
-.wrapCard {
+.carrusel {
+  margin: 100px auto;
+  width: 90%;
+  border: 5px solid red;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  overflow: auto;
 }
 
+.carrusel::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapCard {
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 10s infinite linear;
+  padding-right: 1em;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -50%;
+  }
+}
 .card {
   position: relative;
   width: 300px;
